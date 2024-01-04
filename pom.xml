@@ -553,4 +553,17 @@
         </repository>
     </repositories>
 
+    <distributionManagement>
+             <repository>
+                 <id>central</id>
+                 <name>1552b7850bac-releases</name>
+                 <url>http://192.168.0.14:8081/artifactory/dm01-test-mvn-dev-local</url>
+             </repository>
+             <snapshotRepository>
+                          <id>snapshots</id>
+                          <name>1552b7850bac-snapshots</name>
+                          <url>http://192.168.0.14:8081/artifactory/dm01-test-mvn-dev-local</url>
+             </snapshotRepository>
+    </distributionManagement>
+
 </project>
