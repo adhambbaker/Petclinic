@@ -12,8 +12,12 @@ jobs:
       name: dev
     runs-on: ubuntu-latest
     outputs:
-      matrix: ${{ steps.artifacts.outputs.matrix }}
+      matrix: ${{ steps.create-matrix.outputs.matrix }}
     steps:
+      - name: Parse project config
+        id: create-matrix
+        run: |
+          echo "matrix={ \"component\": [ {\"name\": \"v2\", \"arch\": \"noarch\"}] }" >> $GITHUB_OUTPUT
       - name: Create a temporary artifact downloads Dir
         run: mkdir downloads
 
