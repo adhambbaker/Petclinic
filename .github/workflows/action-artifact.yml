@@ -11,11 +11,14 @@ jobs:
     environment:
       name: dev
     runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.artifacts.outputs.matrix }}
     steps:
       - name: Create a temporary artifact downloads Dir
         run: mkdir downloads
 
       - name: Add artifacts to publish to the temp Dir
+        id: artifacts
         run: | 
           cd downloads
           echo 'alpha' > alpha.html
