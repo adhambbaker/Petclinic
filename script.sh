@@ -18,7 +18,8 @@ echo
 echo Who is running this script?
 whoami
 echo 
-echo
+echo "New command"
+echo "Next command"
 echo How is the disk laid out? 
 df
 echo
